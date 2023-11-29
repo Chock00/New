@@ -11,7 +11,7 @@ class MyWidget(QMainWindow):
         super().__init__()
         uic.loadUi('UI.ui', self)
         self.do_paint = False
-        self.btn.clicked.connect(self.paint)
+        self.btn.clicked.connect(self.paint)                                                                  
 
     def paintEvent(self, event):
         if self.do_paint:
