@@ -3,13 +3,14 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor
+from UI import Ui_MainWindow
 from random import randint
 
 # Там цвет жёлтый и его еле видно, и периодически окружность появляется за кнопкой
 class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
         self.do_paint = False
         self.btn.clicked.connect(self.paint)                                                                  
 
