@@ -26,7 +26,10 @@ class MyWidget(QMainWindow):
         self.update()
     
     def draw_eli(self, qp):
-        qp.setPen(QColor(255, 255, 0))
+        r = randint(0, 255)
+        g = randint(0, 255)
+        b = randint(0, 255)
+        qp.setPen(QColor(r, g, b))
         dia = randint(30, 100)
         levverh = (randint(0, 550), randint(0, 400))
         qp.drawEllipse(levverh[0], levverh[1], dia, dia)
